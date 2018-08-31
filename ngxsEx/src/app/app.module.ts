@@ -10,6 +10,8 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { InputCompComponent } from './user/input-comp/input-comp.component';
 import { Update2CompComponent } from './user/update2-comp/update2-comp.component';
+import { AddBookComponent } from './user/book/add-book/add-book.component';
+import { BookState } from '../xs-add/state/bookState';
 const route: Route[] = [
   {
     path: 'input-comp',
@@ -18,6 +20,10 @@ const route: Route[] = [
   {
     path: 'age-update',
     component: Update2CompComponent
+  },
+  {
+    path: 'add-book',
+    component: AddBookComponent
   }
 ]
 
@@ -25,7 +31,8 @@ const route: Route[] = [
   declarations: [
     AppComponent,
     InputCompComponent,
-    Update2CompComponent
+    Update2CompComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,8 @@ const route: Route[] = [
     ReactiveFormsModule,
     //ngxs section
     NgxsModule.forRoot([
-      UserState
+      UserState,
+      BookState
     ]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),

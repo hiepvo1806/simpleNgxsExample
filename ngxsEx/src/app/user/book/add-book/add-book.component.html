@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm">
+      <div class="form-group">
+        <label class="col-md-4">Book name</label>
+        <input type="text" class="form-control" formControlName="bookname" #bookname/>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Author</label>
+        <input type="text" class="form-control" formControlName="author" #author/>
+        </div>
+        <div class="form-group">
+          <button (click)="createBook(bookname.value, author.value)"  type="button" class="btn btn-primary">Create Book</button>
+        </div>
+    </form>
+  </div>
+</div>

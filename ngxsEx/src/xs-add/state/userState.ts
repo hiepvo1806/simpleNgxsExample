@@ -20,8 +20,15 @@ export class UserState {
         return state.users;
     }
 
+    @Selector()
+    static getLastestUser(state: UserStateModel) {
+        if (state.users.length > 0)
+            return state.users[state.users.length - 1];
+        else return {};
+    }
+
     @Action(AddUser)
-    add({getState, patchState }: StateContext<UserStateModel>, { payload }: AddUser) {
+    add({ getState, patchState }: StateContext<UserStateModel>, { payload }: AddUser) {
         const state = getState();
         patchState({
             users: [...state.users, payload]
@@ -29,11 +36,11 @@ export class UserState {
     }
 
     @Action(UpdateUserAge)
-    updateAgee({getState, patchState }: StateContext<UserStateModel>, { payload }: UpdateUserAge) {
+    updateAgee({ getState, patchState }: StateContext<UserStateModel>, { payload }: UpdateUserAge) {
         const state = getState();
-        var newUser = Object.assign({},state.users[state.users.length-1],{ age : payload});
+        var newUser = Object.assign({}, state.users[state.users.length - 1], { age: payload });
         patchState({
-            users: [...state.users.slice(0,state.users.length-1), newUser]
+            users: [...state.users.slice(0, state.users.length - 1), newUser]
         });
     }
 }
