@@ -10,7 +10,7 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { InputCompComponent } from './user/input-comp/input-comp.component';
 import { Update2CompComponent } from './user/update2-comp/update2-comp.component';
-import { AddBookComponent } from './user/book/add-book/add-book.component';
+import { AddBookComponent } from './book/add-book/add-book.component';
 import { BookState } from '../xs-add/state/bookState';
 const route: Route[] = [
   {

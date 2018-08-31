@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Store } from '@ngxs/store';
 import { Router } from '@angular/router';
-import { AddBook } from '../../../../xs-add/action/bookAction';
+import { AddBook } from '../../../xs-add/action/bookAction';
 
 @Component({
   selector: 'app-add-book',
