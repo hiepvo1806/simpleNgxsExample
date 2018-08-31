@@ -31,7 +31,7 @@ export class UserState {
     @Action(UpdateUserAge)
     updateAgee({getState, patchState }: StateContext<UserStateModel>, { payload }: UpdateUserAge) {
         const state = getState();
-        var newUser = Object.assign(state.users[state.users.length-1],{ age : payload});
+        var newUser = Object.assign({},state.users[state.users.length-1],{ age : payload});
         patchState({
             users: [...state.users.slice(0,state.users.length-1), newUser]
         });

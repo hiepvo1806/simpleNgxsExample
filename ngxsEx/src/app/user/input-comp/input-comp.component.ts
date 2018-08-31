@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Store } from '@ngxs/store';
-import { AddUser } from '../../xs-add/action/userAction';
+import { AddUser } from '../../../xs-add/action/userAction';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 @Component({
   selector: 'app-input-comp',

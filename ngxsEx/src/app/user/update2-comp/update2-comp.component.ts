@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Store } from '@ngxs/store';
-import { UpdateUserAge } from '../../xs-add/action/userAction';
+import { UpdateUserAge } from '../../../xs-add/action/userAction';
 import { Router } from '@angular/router';
 
 @Component({
