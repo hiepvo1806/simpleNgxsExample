@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm">
+      <div class="form-group">
+        <label class="col-md-4">Age</label>
+        <input type="number" class="form-control" formControlName="age" #age />
+      </div>
+      <div class="form-group">
+        <button (click)="updateAge(age.value)" type="button" class="btn btn-primary">Update user age</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -9,17 +9,23 @@ import { NgxsModule } from '@ngxs/store';
 import { UserState } from '../xs-add/state/userState';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { Update2CompComponent } from './update2-comp/update2-comp.component';
 const route: Route[] = [
   {
     path: 'input-comp',
     component: InputCompComponent
+  },
+  {
+    path: 'age-update',
+    component: Update2CompComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputCompComponent
+    InputCompComponent,
+    Update2CompComponent
   ],
   imports: [
     BrowserModule,

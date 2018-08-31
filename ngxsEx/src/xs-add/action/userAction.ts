@@ -6,3 +6,9 @@ export class AddUser {
 
     constructor(public payload: User) {}
 }
+
+export class UpdateUserAge {
+    static readonly type = '[User] Update age';
+
+    constructor(public payload: number) {}
+}
